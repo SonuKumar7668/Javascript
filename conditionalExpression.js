@@ -1,4 +1,6 @@
-let a = "55"
+let a = "5"
+console.log(a)
 a = Number.parseInt(a)
 console.log(typeof a)
-prompt("hello")
+console.log(a)
+console.log("you can ", a<18? "not drive" : "drive")
