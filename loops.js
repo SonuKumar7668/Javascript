@@ -14,15 +14,15 @@
 // }
 // console.log("sum of first ", n , "natural numbers is ", sum)
 //------------//
-let obj = {
+let objc = {
     harry: 88,
     shubh: 45,
     shiv: 56,
     ritik: 98,
 }
 // for in
-for(let a in obj){
-    console.log("markd of ", a, "=" , obj[a])
+for(let a in objc){
+    console.log("markd of ", a, "=" , objc[a])
 }
 // for of
 for(let b of "harry"){

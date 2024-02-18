@@ -8,3 +8,5 @@ else{
 }
 console.log(age ** grace);
 console.log(age % grace);
+//
+age > grace ? (console.log("age")): (console.log("grace"));
