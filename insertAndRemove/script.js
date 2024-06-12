@@ -1,0 +1,16 @@
+console.log("script.js Initialising");
+console.log(document.querySelector(".container").innerText);
+// document.querySelector(".box").hidden=true;
+// console.log(document.querySelector(".box").hidden=true);
+document.querySelector(".box").innerHTML="this is changed html";
+let q=document.querySelector(".box");
+console.log(document.querySelector(".box").hasAttribute("style"));
+console.log(q.getAttribute("style"));
+q.setAttribute("style","display :inline");
+console.log(q.getAttribute("style"));
+let div= document.createElement("div");
+div.innerHTML ="This is new div tag<b> by Sonu</b>";
+div.setAttribute("class","created");
+document.querySelector(".container").after(div);
+let cont = document.querySelector(".container");
+cont.insertAdjacentHTML("beforeend","<h1>I am under the water please help me,here too much raining</h1>");

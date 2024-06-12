@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Web Page</title>
+    <title>Document</title>
 </head>
+<style>
+    *{
+        margin: 0px;
+    }
+</style>
 <body>
-    <script src="script.js">
-        // advantage of using script tag 
-        // 1. Seperation of concerns
-        // 2. Browser Caching
+    <h1>Heading</h1>
+    <script>
+        document.title = "Title";
+        console.log(document.title);
+        console.log(document.body);
     </script>
-    <h1>Hello World.</h1>
 </body>
 </html>
