@@ -1,80 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Color</title>
-</head>
-<style>
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
-    .box{
-        width: 50px;
-        height: 50px;
-        border: 2px solid black;
+    .box {
+      width: 50px;
+      height: 50px;
+      border: 2px solid black;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="container">
-        <div class="box">box1</div>
-        <div class="box">box2</div>
-        <div class="box">box3</div>
-        <div class="box">box4</div>
-        <div class="box">box5</div>
-        <div class="box">box6</div>
-        <div class="box">box7</div>
-        <div class="box">box8</div>
-        <div class="box">box9</div>
-        <div class="box">box10</div>
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+      <div class="box">box6</div>
+      <div class="box">box7</div>
+      <div class="box">box8</div>
+      <div class="box">box9</div>
+      <div class="box">box10</div>
     </div>
     <script>
-        console.log("hello");
-        let a=document.querySelectorAll(".box");
-        console.log(a);
-        a.forEach(e=>{
-            let n=Math.random();
-            let n1=n*10;
-            let n2=parseInt(n1);
-            switch(n2){
-                case 1:
-                    e.style.backgroundColor="red";
-                    break;
-                case 2:
-                e.style.backgroundColor="blue";
-                    break;
-                case 3:
-                e.style.backgroundColor="green";
-                    break;
-                case 4:
-                e.style.backgroundColor="yellow";
-                    break;
-                case 5:
-                e.style.backgroundColor="cyan";
-                    break;
-                case 6:
-                e.style.backgroundColor="purple";
-                    break;
-                case 7:
-                e.style.backgroundColor="orange";
-                    break;
-                case 8:
-                e.style.backgroundColor="pink";
-                    break;
-                case 9:
-                e.style.backgroundColor="brown";
-                    break;
-                default:
-                e.style.backgroundColor="black";
-            }
-            
-
-        })
-        
+      function randomcolor() {
+        let val1 = Math.ceil(0 + Math.random() * 255);
+        let val2 = Math.ceil(0 + Math.random() * 255);
+        let val3 = Math.ceil(0 + Math.random() * 255);
+        return `rgb(${val1},${val2},${val3})`;
+      }
+      console.log("hello");
+      console.log(randomcolor());
+      let a = document.querySelector(".container").children;
+      Array.from(a).forEach((e) => {
+        e.style.backgroundColor = randomcolor();
+      });
     </script>
-</body>
+  </body>
 </html>

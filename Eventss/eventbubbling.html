@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+  </head>
+  <style>
+    .container {
+      background-color: green;
+      padding: 4px;
+      margin: 20px;
+    }
+    .childcontainer {
+      background-color: red;
+      padding: 4px;
+      margin: 10px;
+    }
+    .child {
+      border: 2px solid black;
+      background-color: aqua;
+      padding: 4px;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <h1>Page to show Event Bubbling</h1>
+    <div class="container">
+      <div class="childcontainer">
+        <div class="child">
+          <b>RGB Bitch</b>
+        </div>
+      </div>
+    </div>
+    <script>
+      let ch = document.querySelector(".child");
+      let chc = document.querySelector(".childcontainer");
+      let co = document.querySelector(".container");
+      document.querySelector(".container").addEventListener("click", (e) => {
+        alert("container was clicked");
+      });
+      document
+        .querySelector(".childcontainer")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("childcontainer was clicked");
+        });
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("chiild was clicked");
+      });
+      function randomcolor() {
+        let val1 = Math.ceil(0 + Math.random() * 255);
+        let val2 = Math.ceil(0 + Math.random() * 255);
+        let val3 = Math.ceil(0 + Math.random() * 255);
+        return `rgb(${val1},${val2},${val3})`;
+      }
+    //   setInterval(() => {
+    //     ch.style.backgroundColor = randomcolor();
+    //     chc.style.backgroundColor = randomcolor();
+    //     co.style.backgroundColor = randomcolor();
+    //   }, 300);
+      setTimeout(() => {
+        ch.style.backgroundColor = randomcolor();
+        chc.style.backgroundColor = randomcolor();
+        co.style.backgroundColor = randomcolor();
+      }, 300);
+    </script>
+  </body>
+</html>
