@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+    <h1>Hello by HTML</h1>
+    <input type="button" name="Button" value="Click" onclick="alert(`Button Clicked`)">
+    <script>
+        console.log("1st log");
+        document.write("<h1>Hello by JS</h1>");
+        document.write("<h1>Hello EveryOne</h1>");
+        let d=getFullYear()
+        document.write(d);
+        setTimeout(() => {
+            console.log("Inside-Interval");
+        }, 1000);
+        const callback=(arg)=>{
+            console.log(arg);
+        }
+        const loadScript =(src,callback)=>{
+            let sc = document.createElement("script");
+            sc.src=src;
+            sc.onload = callback("Sonu");
+            document.head.append(sc);
+        }
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",callback);
+    </script>
+</body>
+</html>

@@ -55,16 +55,16 @@
         let val3 = Math.ceil(0 + Math.random() * 255);
         return `rgb(${val1},${val2},${val3})`;
       }
-    //   setInterval(() => {
-    //     ch.style.backgroundColor = randomcolor();
-    //     chc.style.backgroundColor = randomcolor();
-    //     co.style.backgroundColor = randomcolor();
-    //   }, 300);
-      setTimeout(() => {
+      setInterval(() => {
         ch.style.backgroundColor = randomcolor();
         chc.style.backgroundColor = randomcolor();
         co.style.backgroundColor = randomcolor();
       }, 300);
+      // setTimeout(() => {
+      //   ch.style.backgroundColor = randomcolor();
+      //   chc.style.backgroundColor = randomcolor();
+      //   co.style.backgroundColor = randomcolor();
+      // }, 300);
     </script>
   </body>
 </html>
