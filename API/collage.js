@@ -12,11 +12,15 @@ btn.addEventListener("click", async ()=>{
 async function show(colleges){
     let list=document.querySelector(".list");
     list.innerText="";
+    try{
     for(col of colleges){
         console.log(col.name);
         let li=document.createElement("li");
-        li.innerText=col.name
+        li.innerText=`${col.name}, State - ${col.country}`;
         list.appendChild(li);
+    }
+    }catch(err){
+        console.log("error",err);
     }
 }
 // let country="India";
@@ -29,4 +33,4 @@ async function getreq(country){
         console.log("Error",err);
     }
 }
-getreq();
+// getreq();
